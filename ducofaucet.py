@@ -7,8 +7,8 @@ print("Connecting to DUCO server...")
 duco = Wallet()
 print("Connected !")
 
-faucetuser = "peer" # faucet's username
-faucetpassword = "junu12345" # faucet's password
+faucetuser = "" # faucet's username
+faucetpassword = "" # faucet's password
 pathToClaimTimes = "ducofaucetclaims.json" # path to the file that stores claims
 
 
