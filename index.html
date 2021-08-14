@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+ <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Duco Faucet</title>
+</head>
+<body>
+  <!--claim-->
+    <script>
+            const serveraddress = "YOUR IP"
+        
+            function claim() {
+                username = document.getElementById("usernameInput").value
+            
+                xhr = new XMLHttpRequest();
+                xhr.open("GET", "http://" + serveraddress + "/claim/" + username);
+                xhr.onloadend = function () { alert(xhr.responseText); document.getElementById("claimresult").innerHTML = xhr.responseText;};
+                xhr.send();
+                document.getElementById("claimresult").innerHTML = "Sucessful"
+            }
+        </script>
+<!--claim-->   
+  <span>Username : </span><input id="usernameInput" type="text"></input>
+                    <button onclick="claim()">Claim</button>
+                    <div id="claimresult"></div>
+  </body>
+</html>
